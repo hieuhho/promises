@@ -9,9 +9,9 @@ var request = require('request');
 var pluckFirstLineFromFile = function (filePath, callback) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      callback(err)
+      callback(err);
     } else {
-      callback(null, data.split('\n')[0])
+      callback(null, data.split('\n')[0]);
     }
   });
 };
@@ -23,7 +23,7 @@ var getStatusCode = function (url, callback) {
     if (err) {
       callback(err);
     } else {
-      callback(null, res.statusCode)
+      callback(null, res.statusCode);
     }
   });
 };
